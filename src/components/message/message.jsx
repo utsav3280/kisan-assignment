@@ -19,8 +19,9 @@ const Message = () => {
                     alert("OTP sent Successfully")
                     navigate("/");
                 }
-                else{
-                    alert("There was some error. Try Again")
+                else {
+                    alert("Failed. Phone Number is not verified on Twilio")
+                    console.log(res.data.error);
                 }
             })
             .catch((err) => console.log(err))
