@@ -1,0 +1,39 @@
+.input-field{
+    width: 90%;
+    height: 40px;
+    padding-left: 10px;
+    box-sizing: border-box;
+}
+
+.send-message-btns{
+    width: 75px;
+    height: 30px;
+    margin: 10px;
+    margin-left: 0px;
+    margin-top: 20px;
+    border: 0px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#cancel-btn{
+    background-color: red;
+    color: white;
+}
+
+#send-btn{
+    background-color: green;
+    color: white;
+}
+
+#cancel-btn:hover{
+    background-color: rgb(189, 0, 0);
+}
+
+#send-btn:hover{
+    background-color: rgb(0, 78, 0);
+}
+
+.box{
+    margin: 20px;
+}
