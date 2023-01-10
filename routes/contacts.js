@@ -6,6 +6,7 @@ const client = require('twilio')(process.env.accountSid, process.env.authToken);
 
 router.post("/messages", async (req, res) => {
     try {
+        // console.log(req.body.name, req.body.phone, req.body.otp);
         client.messages.create({
             body: `Hi. Your OTP is ${req.body.otp}`,
             to: `+91${req.body.phone}`,
@@ -21,6 +22,10 @@ router.post("/messages", async (req, res) => {
             }) 
         }).catch((error) => {
             console.log(error)
+            res.json({
+                status: "failed",
+                error: error.message
+            }) 
         })
     } catch (error) {
         res.json({
